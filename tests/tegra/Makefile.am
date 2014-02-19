@@ -5,9 +5,17 @@ AM_CPPFLAGS = \
 
 AM_CFLAGS = -Wall -Werror
 
+noinst_LTLIBRARIES = libdrm-test.la
+libdrm_test_la_SOURCES = \
+	drm-test.c \
+	drm-test.h \
+	drm-test-tegra.c \
+	drm-test-tegra.h
+
 LDADD = \
 	../../tegra/libdrm_tegra.la \
-	../../libdrm.la
+	../../libdrm.la \
+	libdrm-test.la
 
 TESTS = \
 	openclose \
