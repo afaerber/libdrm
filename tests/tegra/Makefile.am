@@ -6,6 +6,7 @@ AM_CPPFLAGS = \
 AM_CFLAGS = -Wall -Werror
 
 noinst_LTLIBRARIES = libdrm-test.la
+libdrm_test_la_LIBADD = ../../libdrm.la
 libdrm_test_la_SOURCES = \
 	drm-test.c \
 	drm-test.h \
